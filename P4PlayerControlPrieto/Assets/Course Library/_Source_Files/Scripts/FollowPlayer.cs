@@ -12,15 +12,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.position = player.transform.position + offset2;
-        }
+        
     }
     // Update is called once per frame
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
-      
+        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.position = player.transform.position + offset2;
+        }
+          
+        
     }
 }
